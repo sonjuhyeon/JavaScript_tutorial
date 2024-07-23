@@ -4,16 +4,19 @@
 
 // 1. 문자열(string)
 // '' 안에 작성되는 원시 값은 문자로 인식되고 이들의 나열이 문자열이다.
+const name = "my name is Juhyeon";
+console.log(name);
+console.log(typeof name);
 
 // 문자는 홀따옴표와 겹따옴표 어떤 것을 사용해도 되나, 따옴표 안에 다른 따옴표가 들어간다면 홀과 겹을 다르게 사용해야 한다.
 // 홑따옴표 안에 홑따옴표와 겹따옴표를 같이 사용하고 싶은 경우에는 홑따움표 앞에 \를 붙여 사용한다.
 const str = 'I\'am "Juhyeon"';
 console.log(str);
-
-// const class1 = "header";
-// const tag = "<div class='" + class1 + "'></div>";
-// console.log(tag);
 console.log(typeof str);
+
+const class1 = "header";
+const tag = "<div class='" + class1 + "'></div>";
+console.log(tag);
 
 // type을 체크할 때는 typeof() 메서드를 사용한다
 
@@ -27,7 +30,7 @@ const class_header = "header";
 const class_container = "container";
 const class_logo = "logo";
 
-const tag2 =
+const tag1 =
   '<div class="' +
   class_header +
   '"><div class="' +
@@ -35,15 +38,16 @@ const tag2 =
   '"><div class="' +
   class_logo +
   '"></div></div></div>';
-console.log(tag2);
+console.log(tag1);
 
-const tag3 = `
+const tag2 = `
     <div class="${class_header}">
       <div class="${class_container}">
         <div class="${class_logo}"></div>
       </div>
     </div>`;
-console.log(tag3);
+console.log(tag2);
+console.log(typeof tag2);
 
 // 3. 숫자(number)
 // 숫자는 따옴표 없이 사용하며, 말 그대로 숫자를 사용한다. 숫자 형태이므로 연산이 가능하다.
@@ -65,8 +69,8 @@ console.log(typeof e);
 // 암묵적 형변환된 데이터는 숫자형으로 변경된다.
 const f = 10;
 const g = d + f;
-console.log(typeof g); //string
 console.log(d + f);
+console.log(typeof g); //string
 
 const h = d * f;
 console.log(h);
@@ -76,7 +80,7 @@ const i = d - f;
 console.log(i);
 console.log(typeof i);
 
-// 4. NaN
+// 4. NaN(Not-a-Number)
 // 자바스크립트 엔진이 숫자형으로 인식하는 것 중에 특이한 것은 NaN이다. 이는 Not a Number의 이니셜로 '숫자가 아님'이지만 숫자다.
 console.log(f * "a");
 console.log(typeof (f * "a"));
@@ -97,7 +101,7 @@ console.log(l);
 console.log(typeof l);
 
 // 7. null
-// undefined와 같이 빈어있는 값이라는 의미는 같다.
+// undefined와 같이 비어있는 값이라는 의미는 같다.
 console.log(undefined == null);
 
 // 하지만 데이터의 타입은 undefined와 다르다.
