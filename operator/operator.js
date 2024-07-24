@@ -95,37 +95,3 @@ console.log(++m - n--); // 5 - 7 = -2
 console.log(m-- + --n); // 5 + 5 = 10
 // 계산 후 m = 4, n = 5
 console.log(m, n);
-
-console.log("-----------------------------------------------");
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
-console.log(m, n);
