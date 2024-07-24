@@ -36,8 +36,6 @@ if (idArr.includes(id)) {
   console.log("아이디가 없습니다.");
 }
 
-//--------------------------------------------------------------------
-
 // 3. if else if 조건문
 const data = new Date();
 console.log(data);
@@ -59,7 +57,7 @@ if (hour >= 6 && hour < 12) {
 // switch 조건문은 조건식이 true일 경우 조건식 각각의 상황을 분개한다.
 // signiture : switch(condition){case : true logic}
 // 특정 조건이 true일 때 그 이하는 실행을 멈춰야 한다. 이때 break를 만들어준다.
-const value = 5;
+const value = 1;
 switch (value) {
   case 0:
     console.log("0 입니다.");
@@ -75,9 +73,8 @@ switch (value) {
 }
 
 // const inputYear = prompt();
-inputYear = 1997;
-const year = Number(inputYear);
-console.log(year, typeof year);
+year_of_birth = 1997;
+const year = Number(year_of_birth);
 
 let result = "";
 switch (year % 12) {
@@ -119,7 +116,7 @@ switch (year % 12) {
     break;
 }
 
-// document.write(`당신은 ${result} 입니다.`);
+console.log(`당신은 ${result} 입니다.`);
 
 // 5. 삼항 연산자
 // 삼항 연산자는 조건에 따른 로직이 단일하거나 짧을 때 사용된다.
