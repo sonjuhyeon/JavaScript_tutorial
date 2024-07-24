@@ -6,6 +6,12 @@
 console.log(a); // undifined
 var a = 1;
 
+console.log(b); // ReferenceError
+const b = 1;
+
+console.log(c); // ReferenceError
+const c = 1;
+
 // 2. 변수
 // - 임의로 만든 식별자에 특정 데이터를 저장하는 것을 말한다
 // - 변수가 선언되면 자바스크립트 엔진은 특정 공간을 만들고 데이터를 참조한다.
@@ -15,16 +21,16 @@ var a = 1;
 // 상수는 한 번만 저장되기 때문에 별도의 공간을 할당하지 않아 효율적이다.
 // 따라서 대부분 값의 할당은 상수로 선언된다.
 
-// console.log(c); 선언 전 접근불가
-const c = 4;
-// c = 5; 재할당 불가
-console.log(c);
+// console.log(d); 선언 전 접근불가
+const d = 4;
+// d = 5; 재할당 불가
+console.log(d);
 
 // 4. let 변수 선언
 // - 변할 수 있는 값으로 런타임으로 값의 변경(재할당)이 가능하다
 // - let으로 선언된 변수는 값의 변경은 가능하지만 선언을 다시할 수 없다
 
-// console.log(d); // 선언 전 접근불가
-let d = 5;
-d = 7; // 재할당 가능
-console.log(d);
+// console.log(e); // 선언 전 접근불가
+let e = 5;
+e = 7; // 재할당 가능
+console.log(e);
