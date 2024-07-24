@@ -71,7 +71,7 @@ const arrB = [1, 2, 3, 4, 5];
 const arrC = [...arrB, 6, 7, 8];
 console.log(arrC);
 
-function abc(a) {
+function abc(...a) {
   console.log(a);
 }
-abc([...arrB]);
+abc(...arrB);
