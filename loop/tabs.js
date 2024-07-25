@@ -17,3 +17,18 @@ btns.forEach(function (btn, idx) {
     panels[idx].style.display = "block";
   });
 });
+
+//============================
+//Header
+//============================
+
+const headerContents = ["Home", "About", "Services", "Contact"];
+
+headerContents.map((content) => {
+  const headerWrapper = document.querySelector(".header-lists");
+  const headerList = `
+  <li>${content}</li>
+  `;
+
+  headerWrapper.insertAdjacentHTML("beforeend", headerList);
+});

@@ -7,15 +7,14 @@ const arr = [1, 2, 3, "a", "b", { name: "juhyeon" }];
 // signiture : for(const loop variable in array or object){}
 // for in문은 배열의 반복 인덱스를 리턴하고, 해당 배열의 인덱스 요소값을 배열접근 방식으로 리턴할 수 있다.
 for (const i in arr) {
-  console.log(`index: ${i}`);
-  console.log(`value: ${arr[i]}`);
+  console.log(`index: ${i}, value: ${arr[i]}`);
 }
 
 // 2. for of
 // signiture : for(const loop variable of array or object){}
 // for in문과 다르게 for of문의 경우 변수에 할달된 데이터를 인덱스가 아니라 해당 인덱스이 값을 직접 리턴한다.
-for (const j of arr) {
-  console.log(j);
+for (const i of arr) {
+  console.log(i);
 }
 // for in과 for of는 실제로 자주 사용되는 문법은 아니다. 이보다는 주로 for문이 많이 사용된다. python에서는 for in을 주로 사용
 
