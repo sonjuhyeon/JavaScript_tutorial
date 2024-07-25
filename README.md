@@ -1,4 +1,4 @@
-## JavaScript 공부를 위한 repositoy
+## JavaScript 공부한 내용의 repositoy
 - 입력과 출력
 - Data type
 - Operator(연산자)
