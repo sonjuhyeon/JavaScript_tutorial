@@ -6,3 +6,5 @@
 - Conditional(조건문)
 - array(배열)
 - loop(반복문)
+
+[my velog](https://velog.io/@homeless_snail/JavaScript)
