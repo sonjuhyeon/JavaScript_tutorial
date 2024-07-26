@@ -6,9 +6,7 @@ const arr = [1, 2, 3, "a", "b", { name: "juhyeon" }];
 // - signiture : array.forEach((value, index, array) => {})
 // - 콜백 함수의 파라미터로 3가지 값을 가져올 수 있다. 하지만 마지막 파라미터인 배열 반환은 잘 사용되지 않는다.
 arr.forEach(function (v, i, a) {
-  console.log(v);
-  console.log(i);
-  console.log(a);
+  console.log(`value: ${v}, index: ${i}, array: ${a}`);
 });
 
 arr.forEach((v, i) => {
@@ -31,9 +29,7 @@ const arr2 = [223, 86552, 376, 28, 268, 264, 8723, 172];
 console.log(arr2);
 
 const mapArr = arr2.map((v, i, a) => {
-  // console.log(v);
-  // console.log(i);
-  // console.log(a);
+  console.log(`value: ${v}, index: ${i}, array: ${a}`);
   return v * 2;
 });
 
