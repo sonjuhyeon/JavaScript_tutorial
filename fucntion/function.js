@@ -38,7 +38,7 @@ sum1000 = sumNum(1000);
 sum500 = sumNum(500);
 console.log(sum1000, sum500);
 
-// 호이스팅
+// 호이스팅 (기본 함수의 경우만 선언보다 호출이 먼저되어도 작동)
 abc();
 function abc() {
   console.log("hello world");
@@ -47,9 +47,12 @@ function abc() {
 // 3. 익명함수
 // - 함수를 정의할때 함수의 이름(식별자) 없이 정의하는 형태를 말한다.
 // - 이름이 정해지지 않았지만 함수 자체를 변수에 저장했기 때문에 변수 이름이 기명함수의 이름과 같이 사용된다.
-
 // - 즉시실행함수
-(function () {})();
+
+(function () {
+  const a = "hello";
+  console.log(a);
+})();
 
 // 변수에 대입하는 방식: 함수는 일급객체이기 때문에 변수에 대입할 수 있다.
 
@@ -104,10 +107,39 @@ callbackFucntion(function (a) {
 // - this와 관련된 내용은 초반에는 다소 어려운 내용이다. 따라서 DOM 관련 문서 객체 선택 부분에서 조금 다루고, 이후 함수와 관련한 내용이 익숙해진 후 살펴보면 된다.
 // - 그 외 화살표 함수는 일반 함수 작성 방식보다 간편하고, 최근 트랜드에 맞춰가기 위해 사용하는 것이 일반적이다. 필수 사용은 아니다.
 // - signiture : (parameters) => {}
+// function sayHello() {
+//   console.log(hello);
+// }
 
 // - 일반 함수와 마찬가지로 익명처리 될 때는 변수 식별자에 대입하여 표현한다.
+const sayHello = () => {
+  console.log(hello);
+};
+
+() => {};
+
+const arr = [1, 2, "a", {}, null, undefined, true, () => {}];
+console.log(arr);
+
+const obj = {
+  a: 1,
+  b: "b",
+  c: () => {
+    return "c";
+  },
+};
+
+console.log(obj.c());
 
 // - 다른 함수의 콜백 함수로 사용할 때는 변수 식별자에 대입하지 않아도 된다.
 // - 일반적으로 콜백 함수는 초기에 직접 만드는 경우보다 제공되는 메서드에서 사용되는 경우가 많다.(forEach, map, filter, promise, setTimeout, setInterval...)
+
+// const fg = (a) => {
+//   return a
+// }
+
+const fg = (a) => a;
+
+console.log(fg("test"));
 
 // - 화살표 함수 내부에 return만 존재하면 {}를 제외할 수 있다.
