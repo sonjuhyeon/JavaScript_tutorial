@@ -94,6 +94,16 @@ function resPrams(...a) {
 
 console.log(resPrams(2, 4, 6, 1346, 1754, 1634, 1, 3463, 6));
 
+function getAverage() {
+  let result = 0;
+  for (const num of arguments) {
+    result += num;
+  }
+  return result / arguments.length;
+}
+
+console.log(getAverage(1, 4, 7), getAverage(24, 31, 52, 80));
+
 // 6. 콜백 함수
 // 함수는 변수에 저장할 수 있는 자료형이다. 따라서 함수 자체를 다른 함수의 매개변수로 전달할 수 있는데, 이를 콜백함수라 한다.
 // 콜백 함수는 이벤트를 실행하는 addEventListener 또는 배열을 다루는 forEach, map, filter 등에 활용되는 중요한 방식이다(DOM, ArrayFunction)
