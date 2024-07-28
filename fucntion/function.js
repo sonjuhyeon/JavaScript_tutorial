@@ -75,7 +75,13 @@ function overParams(a, b, c) {
 overParams(1, 2, 3, 4);
 overParams(1, 2);
 
-// - 과제 : 별찍기, 더하기 함수로 작성
+// 기본값 매개변수
+function add(a = 2, b = 4) {
+  console.log(`${a} + ${b}`);
+  return a + b;
+}
+
+console.log(add(), add(1), add(1, 3));
 
 // 5. 가변 매개변수 함수
 // - 호출 시 매개변수의 개수가 고정되어 있지 않을 경우 사용할 수 있는 방법이 나머지 매개변수(rest parameter)라 한다.
