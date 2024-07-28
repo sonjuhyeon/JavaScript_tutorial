@@ -92,6 +92,7 @@ console.log(resPrams(2, 4, 6, 1346, 1754, 1634, 1, 3463, 6));
 // 함수는 변수에 저장할 수 있는 자료형이다. 따라서 함수 자체를 다른 함수의 매개변수로 전달할 수 있는데, 이를 콜백함수라 한다.
 // 콜백 함수는 이벤트를 실행하는 addEventListener 또는 배열을 다루는 forEach, map, filter 등에 활용되는 중요한 방식이다(DOM, ArrayFunction)
 // 또한 promise와 같은 비동기 메서드에서도 활용된다
+// - 일반적으로 콜백 함수는 초기에 직접 만드는 경우보다 제공되는 메서드에서 사용되는 경우가 많다.(forEach, map, filter, promise, setTimeout, setInterval...)
 
 function callbackFucntion(cb) {
   cb(8);
@@ -113,13 +114,10 @@ callbackFucntion(function (a) {
 
 // - 일반 함수와 마찬가지로 익명처리 될 때는 변수 식별자에 대입하여 표현한다.
 const sayHello = () => {
-  console.log(hello);
+  console.log("hello");
 };
 
-() => {};
-
-const arr = [1, 2, "a", {}, null, undefined, true, () => {}];
-console.log(arr);
+sayHello();
 
 const obj = {
   a: 1,
@@ -132,7 +130,7 @@ const obj = {
 console.log(obj.c());
 
 // - 다른 함수의 콜백 함수로 사용할 때는 변수 식별자에 대입하지 않아도 된다.
-// - 일반적으로 콜백 함수는 초기에 직접 만드는 경우보다 제공되는 메서드에서 사용되는 경우가 많다.(forEach, map, filter, promise, setTimeout, setInterval...)
+// - 화살표 함수 내부에 return만 존재하면 {}를 제외할 수 있다.
 
 // const fg = (a) => {
 //   return a
@@ -141,5 +139,3 @@ console.log(obj.c());
 const fg = (a) => a;
 
 console.log(fg("test"));
-
-// - 화살표 함수 내부에 return만 존재하면 {}를 제외할 수 있다.
